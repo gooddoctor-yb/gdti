@@ -3,19 +3,28 @@ import styles from "../styles/Home.module.css";
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 import { usePlugin } from "tinacms";
-import { useGithubJsonForm } from "react-tinacms-github";
+import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github";
+import { InlineForm, InlineImage } from "react-tinacms-inline";
 
 export default function Home({ file }) {
   // const data = file.data;
 
   const formOptions = {
     label: "Home Page",
-    fields: [{ name: "title", component: "text" }],
+    fields: [
+      { name: "title", component: "text" },
+      {
+        name: "image_url",
+        component: "image",
+      },
+    ],
   };
 
   // Registers a JSON Tina Form
   const [data, form] = useGithubJsonForm(file, formOptions);
+  console.log("🚀 ~ file: index.tsx ~ line 22 ~ Home ~ data", data);
   usePlugin(form);
+  useGithubToolbarPlugins();
 
   return (
     <div className={styles.container}>
@@ -29,6 +38,8 @@ export default function Home({ file }) {
           {/* Welcome to <a href="https://nextjs.org">Next.js!</a>1 */}
           {data.title}
         </h1>
+
+        <img src={data.image_url} />
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.js</code>
