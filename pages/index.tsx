@@ -9,13 +9,33 @@ import { InlineForm, InlineImage } from "react-tinacms-inline";
 export default function Home({ file }) {
   // const data = file.data;
 
-  const formOptions = {
+  const formOptions: any = {
     label: "Home Page",
     fields: [
       { name: "title", component: "text" },
       {
         name: "image_url",
         component: "image",
+        validate: (value, allValues, meta, field) => {},
+        // Generate the frontmatter value based on the filename
+        // Decide the file upload directory for the post
+        uploadDir: (value, value2) => {
+          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
+          return "/public/";
+        },
+        // Generate the src attribute for the preview image.
+        previewSrc: (fullSrc) => {
+          console.log("fullSrc", fullSrc);
+          if (typeof fullSrc === "string") {
+            if (fullSrc.includes("http")) {
+              return fullSrc;
+            } else {
+              return "/" + fullSrc;
+            }
+          } else {
+            return fullSrc.previewSrc;
+          }
+        },
       },
     ],
   };
@@ -39,7 +59,7 @@ export default function Home({ file }) {
           {data.title}
         </h1>
 
-        <img src={data.image_url} />
+        <img width="400" src={typeof data.image_url === "string" ? data.image_url : data.image_url.previewSrc} />
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.js</code>
