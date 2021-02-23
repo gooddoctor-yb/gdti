@@ -1,4 +1,10 @@
 {
-    "title": "Give ",
-    "image_url": "1.jpg"
+  "title": "Give ",
+  "image_url": {
+    "id": "public/239-1-4.jpg",
+    "filename": "239-1-4.jpg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/239-1-4.jpg"
+  }
 }
