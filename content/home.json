@@ -1,10 +1,10 @@
 {
   "title": "Give Testst",
   "image_url": {
-    "id": "public/1.jpg",
-    "filename": "1.jpg",
+    "id": "public/singapore-4.jpg",
+    "filename": "singapore-4.jpg",
     "directory": "public/",
     "type": "file",
-    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/1.jpg"
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/singapore-4.jpg"
   }
 }
