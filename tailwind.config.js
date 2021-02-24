@@ -31,6 +31,12 @@ module.exports = {
         px60: "60px",
         px70: "70px",
       },
+      minWidth: {
+        px180: "180px",
+      },
+      minHeight: {
+        px180: "180px",
+      },
       lineHeight: {
         header: "6.5rem",
       },

@@ -29,5 +29,82 @@
     "directory": "public/company/",
     "type": "file",
     "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/company/image3.png"
+  },
+  "who_we_are": "Hey, nice to meet you. We’re Good Doctor",
+  "who_we_are_description": "Appointed official partner of Grab in rolling out the GrabHealth service, our aim is to connect healthcare professionals with patients in delivering high-quality health services, thus improving accessibility of healthcare without being constrained by time and geographic boundaries.",
+  "gdt_accent": "Good Doctor Technology(GDT) is a health-tech company with the vision of ‘One Doctor for One Family in SEA’",
+  "animation_title_1": "Covid-19 Updates",
+  "animation_description_1": "The latest resources to keep your family and you healthy and safe",
+  "animation_image_1": {
+    "id": "public/animation_001.svg",
+    "filename": "animation_001.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/animation_001.svg"
+  },
+  "animation_title_2": "Parenthood Tips",
+  "animation_description_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+  "animation_image_2": {
+    "id": "public/animation_002.svg",
+    "filename": "animation_002.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/animation_002.svg"
+  },
+  "animation_title_3": "Healthy Life",
+  "animation_description_3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+  "animation_image_3": {
+    "id": "public/animation_003.svg",
+    "filename": "animation_003.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/animation_003.svg"
+  },
+  "our_products": "Learn more about the other different ways we serve your healthcare needs.",
+  "our_product_image_1": {
+    "id": "public/doctor.svg",
+    "filename": "doctor.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/doctor.svg"
+  },
+  "our_product_title_1": "Medical Consultation",
+  "our_product_description_1": "From General Practitioners to Specialists, talking to a doctor is only 3 clicks away.",
+  "our_product_image_2": {
+    "id": "public/goodmall.svg",
+    "filename": "goodmall.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/goodmall.svg"
+  },
+  "our_product_title_2": "The GoodMall",
+  "our_product_description_2": "Purchase your medication and other health products from licensed pharmacies with no hidden costs.",
+  "tips_title_1": "Book medical appointment",
+  "tips_description_1": "Book your next medical appointment with hundreds of our hospital & lab partners - quick & easy.",
+  "tips_image_1": {
+    "id": "public/book_medical.svg",
+    "filename": "book_medical.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/book_medical.svg"
+  },
+  "tips_title_2": "Health articles",
+  "tips_description_2": "Be updated with thousands of health articles specially curated by our medical team to keep you informed & healthy.",
+  "tips_image_2": {
+    "id": "public/health_article.svg",
+    "filename": "health_article.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/health_article.svg"
+  },
+  "business_solutions": "Be the boss who gives health insurance that doesn’t cost an arm and a leg",
+  "business_solutions_title_1": "Good Doctor Business",
+  "business_solutions_description_1": "Provide a holistic healthcare plan for your employees or insurance policy holders",
+  "business_solutions_image_1": {
+    "id": "public/good_doctor_business.svg",
+    "filename": "good_doctor_business.svg",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/good_doctor_business.svg"
   }
 }

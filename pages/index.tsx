@@ -21,112 +21,10 @@ import InsSVG from "../public/social/ins.svg";
 import LinkedinSVG from "../public/social/linkedin.svg";
 import TwitterSVG from "../public/social/twitter.svg";
 import YoutubeSVG from "../public/social/youtube.svg";
+import { formOptions } from "../config_tina/home";
 
 export default function Home({ file }) {
   // const data = file.data;
-
-  const formOptions: any = {
-    label: "Home Page",
-    fields: [
-      { name: "title", component: "text" },
-      {
-        name: "title1",
-        component: "text",
-      },
-      {
-        name: "title2",
-        component: "text",
-      },
-      {
-        name: "header_image_url",
-        component: "image",
-        validate: (value, allValues, meta, field) => {},
-        // Generate the frontmatter value based on the filename
-        // Decide the file upload directory for the post
-        uploadDir: (value, value2) => {
-          return "/public/";
-        },
-        // Generate the src attribute for the preview image.
-        previewSrc: (fullSrc) => {
-          if (typeof fullSrc === "string") {
-            if (fullSrc.includes("http")) {
-              return fullSrc;
-            } else {
-              return "/" + fullSrc;
-            }
-          } else {
-            return fullSrc?.previewSrc;
-          }
-        },
-      },
-      {
-        name: "company_milestone_1",
-        component: "image",
-        validate: (value, allValues, meta, field) => {},
-        // Generate the frontmatter value based on the filename
-        // Decide the file upload directory for the post
-        uploadDir: (value, value2) => {
-          return "/public/";
-        },
-        // Generate the src attribute for the preview image.
-        previewSrc: (fullSrc) => {
-          if (typeof fullSrc === "string") {
-            if (fullSrc.includes("http")) {
-              return fullSrc;
-            } else {
-              return "/" + fullSrc;
-            }
-          } else {
-            return fullSrc?.previewSrc;
-          }
-        },
-      },
-      {
-        name: "company_milestone_2",
-        component: "image",
-        validate: (value, allValues, meta, field) => {},
-        // Generate the frontmatter value based on the filename
-        // Decide the file upload directory for the post
-        uploadDir: (value, value2) => {
-          return "/public/";
-        },
-        // Generate the src attribute for the preview image.
-        previewSrc: (fullSrc) => {
-          if (typeof fullSrc === "string") {
-            if (fullSrc.includes("http")) {
-              return fullSrc;
-            } else {
-              return "/" + fullSrc;
-            }
-          } else {
-            return fullSrc.previewSrc;
-          }
-        },
-      },
-      {
-        name: "company_milestone_3",
-        component: "image",
-        validate: (value, allValues, meta, field) => {},
-        // Generate the frontmatter value based on the filename
-        // Decide the file upload directory for the post
-        uploadDir: (value, value2) => {
-          return "/public/";
-        },
-        // Generate the src attribute for the preview image.
-        previewSrc: (fullSrc) => {
-          if (typeof fullSrc === "string") {
-            if (fullSrc.includes("http")) {
-              return fullSrc;
-            } else {
-              return "/" + fullSrc;
-            }
-          } else {
-            return fullSrc?.previewSrc;
-          }
-        },
-      },
-    ],
-  };
 
   // Registers a JSON Tina Form
   const [data, form] = useGithubJsonForm(file, formOptions);
@@ -386,8 +284,8 @@ export default function Home({ file }) {
           <div className="grid grid-cols-2 gap-3 auto-cols-fr">
             <div className="col-span-1">
               <div className="flex items-center p-9 bg-white space-x-5">
-                <div>
-                  <BookMedical />
+                <div className="min-h-px180 min-w-px180">
+                  <img className="w-full h-full" alt="medical" src="/book_medical.svg" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold">Book medical appointment</h2>
@@ -399,8 +297,8 @@ export default function Home({ file }) {
             </div>
             <div className="col-span-1">
               <div className="flex items-center p-9 bg-white space-x-5">
-                <div>
-                  <HealthArticle />
+                <div className="min-h-px180 min-w-px180">
+                  <img className="w-full h-full" alt="medical" src="/health_article.svg" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold">Health articles</h2>
@@ -429,7 +327,12 @@ export default function Home({ file }) {
 
         <div className="grid grid-cols-2 gap-3 auto-cols-fr mt-11">
           <div className="col-span-1">
-            <GoodDoctorBusiness />
+            <img
+              style={{ height: "426px", width: "483px" }}
+              src="/good_doctor_business.svg"
+              alt="gooddoctor business"
+            />
+            {/* <GoodDoctorBusiness /> */}
           </div>
           <div className="col-span-1 self-center">
             <h2 className="font-bold text-title1 leading-tight">Good Doctor Business</h2>
