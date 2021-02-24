@@ -138,7 +138,11 @@ export default function Home({ file }) {
               <div className="absolute z-20">
                 <GDbackground />
               </div>
-              <img style={{ marginTop: "400px" }} className="absolute z-10" src={data.image_url} />
+              <img
+                style={{ marginTop: "400px" }}
+                className="absolute z-10"
+                src={typeof data.image_url === "string" ? data.image_url : data.image_url.previewSrc}
+              />
             </div>
           </div>
         </div>
