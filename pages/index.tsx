@@ -17,6 +17,25 @@ import LinkedinSVG from "../public/social/linkedin.svg";
 import TwitterSVG from "../public/social/twitter.svg";
 import YoutubeSVG from "../public/social/youtube.svg";
 import { formOptions } from "../config_tina/home";
+import styled from "styled-components";
+
+const FormInput = styled.div`
+  display: flex;
+  flex-direction: column;
+  > input {
+    margin-top: 24px;
+
+    ~ span {
+      border: 1px solid #ffffff;
+    }
+
+    &:focus {
+      ~ span {
+        border: 1px solid #255bb7;
+      }
+    }
+  }
+`;
 
 export default function Home({ file }) {
   // const data = file.data;
@@ -377,21 +396,21 @@ export default function Home({ file }) {
 
           <div className="col-start-7 col-end-13 relative">
             <div className="absolute right-0 ml-6 contact-wrapper bg-normal_text_light px-px70 py-px60 flex flex-col text-white space-y-8">
-              <div className="flex flex-col">
+              <FormInput>
                 <label>First & last name *</label>
-                <input className="form-input" placeholder="Your first & last name" />
-                <span className="underline border focus:border-brand_title"></span>
-              </div>
-              <div className="flex flex-col">
+                <input className="mt-3 bg-transparent focus: outline-none" placeholder="Your first & last name" />
+                <span data-underline className=""></span>
+              </FormInput>
+              <FormInput>
                 <label>Email address *</label>
-                <input className="form-input" value="" placeholder="Your email address" />
-                <span className="underline border focus:border-brand_title"></span>
-              </div>
-              <div className="flex flex-col">
+                <input className="mt-3 bg-transparent focus: outline-none" placeholder="Your email address" />
+                <span data-underline className=""></span>
+              </FormInput>
+              <FormInput>
                 <label>Enquiry details *</label>
-                <input className="form-input" value="" placeholder="Your enquiry" />
-                <span className="underline border focus:border-brand_title"></span>
-              </div>
+                <input className="mt-3 bg-transparent focus: outline-none" placeholder="Your enquiry" />
+                <span data-underline className=""></span>
+              </FormInput>
               <div className="pt-8 text-center">
                 <p>By sending this inquiry, I agree to the Terms & Conditions</p>
                 <button className="bg-brand_title hover:bg-brand_link hover:shadow-2xl rounded px-10 py-4 mt-6 font-bold">
@@ -486,16 +505,16 @@ export default function Home({ file }) {
                   </ol>
                 </div>
                 {/* group4 */}
-                <div>
-                  <h1>Careers</h1>
+                <div className="space-y-4">
+                  <h1 className="font-semibold">Careers</h1>
                   <ol>
                     <li>GDT life</li>
                     <li>GDT teams</li>
                     <li>Office locations</li>
                   </ol>
                 </div>
-                <div>
-                  <h1>Brand</h1>
+                <div className="space-y-4">
+                  <h1 className="font-semibold">Brand</h1>
                   <ol>
                     <li>GDT Indonesia</li>
                     <li>GDT Singapore</li>
