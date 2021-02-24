@@ -1,7 +1,22 @@
+var uploadDir = (value, value2) => {
+  return "/public/";
+};
+
+var previewSrc = (fullSrc) => {
+  if (typeof fullSrc === "string") {
+    if (fullSrc.includes("http")) {
+      return fullSrc;
+    } else {
+      return "/" + fullSrc;
+    }
+  } else {
+    return fullSrc?.previewSrc;
+  }
+};
+
 export const formOptions: any = {
   label: "Home Page",
   fields: [
-    { name: "title", component: "text" },
     {
       name: "title1",
       component: "text",
@@ -13,90 +28,111 @@ export const formOptions: any = {
     {
       name: "header_image_url",
       component: "image",
-      validate: (value, allValues, meta, field) => {},
-      // Generate the frontmatter value based on the filename
-      // Decide the file upload directory for the post
-      uploadDir: (value, value2) => {
-        return "/public/";
-      },
-      // Generate the src attribute for the preview image.
-      previewSrc: (fullSrc) => {
-        if (typeof fullSrc === "string") {
-          if (fullSrc.includes("http")) {
-            return fullSrc;
-          } else {
-            return "/" + fullSrc;
-          }
-        } else {
-          return fullSrc?.previewSrc;
-        }
-      },
+      uploadDir,
+      previewSrc,
     },
     {
       name: "company_milestone_1",
       component: "image",
-      validate: (value, allValues, meta, field) => {},
-      // Generate the frontmatter value based on the filename
-      // Decide the file upload directory for the post
-      uploadDir: (value, value2) => {
-        return "/public/";
-      },
-      // Generate the src attribute for the preview image.
-      previewSrc: (fullSrc) => {
-        if (typeof fullSrc === "string") {
-          if (fullSrc.includes("http")) {
-            return fullSrc;
-          } else {
-            return "/" + fullSrc;
-          }
-        } else {
-          return fullSrc?.previewSrc;
-        }
-      },
+      uploadDir,
+      previewSrc,
     },
     {
       name: "company_milestone_2",
       component: "image",
-      validate: (value, allValues, meta, field) => {},
-      // Generate the frontmatter value based on the filename
-      // Decide the file upload directory for the post
-      uploadDir: (value, value2) => {
-        return "/public/";
-      },
-      // Generate the src attribute for the preview image.
-      previewSrc: (fullSrc) => {
-        if (typeof fullSrc === "string") {
-          if (fullSrc.includes("http")) {
-            return fullSrc;
-          } else {
-            return "/" + fullSrc;
-          }
-        } else {
-          return fullSrc.previewSrc;
-        }
-      },
+      uploadDir,
+      previewSrc,
     },
     {
       name: "company_milestone_3",
       component: "image",
-      validate: (value, allValues, meta, field) => {},
-      // Generate the frontmatter value based on the filename
-      // Decide the file upload directory for the post
-      uploadDir: (value, value2) => {
-        return "/public/";
-      },
-      // Generate the src attribute for the preview image.
-      previewSrc: (fullSrc) => {
-        if (typeof fullSrc === "string") {
-          if (fullSrc.includes("http")) {
-            return fullSrc;
-          } else {
-            return "/" + fullSrc;
-          }
-        } else {
-          return fullSrc?.previewSrc;
-        }
-      },
+
+      uploadDir,
+      previewSrc,
     },
+    {
+      name: "who_we_are",
+      component: "text",
+    },
+    {
+      name: "who_we_are_description",
+      component: "text",
+    },
+    {
+      name: "gdt_accent",
+      component: "text",
+    },
+    {
+      name: "animation_title_1",
+      component: "text",
+    },
+    {
+      name: "animation_description_1",
+      component: "text",
+    },
+    {
+      name: "animation_image_1",
+      component: "image",
+      uploadDir,
+      previewSrc,
+    },
+    {
+      name: "animation_title_2",
+      component: "text",
+    },
+    {
+      name: "animation_description_2",
+      component: "text",
+    },
+    {
+      name: "animation_image_2",
+      component: "image",
+      uploadDir,
+      previewSrc,
+    },
+    // {
+    //   name: "animation_title_3",
+    //   component: "text",
+    // },
+    // {
+    //   name: "animation_description_3",
+    //   component: "text",
+    // },
+    // {
+    //   name: "animation_image_3",
+    //   component: "image",
+    //   uploadDir,
+    //   previewSrc,
+    // },
+    // {
+    //   name: "our_products",
+    //   component: "text",
+    // },
+    // {
+    //   name: "our_product_title_1",
+    //   component: "text",
+    // },
+    // {
+    //   name: "our_product_description_1",
+    //   component: "text",
+    // },
+    // {
+    //   name: "our_product_image_1",
+    //   uploadDir,
+    //   previewSrc,
+    // },
+    // {
+    //   name: "our_product_title_2",
+    //   component: "text",
+    // },
+    // {
+    //   name: "our_product_description_2",
+    //   component: "text",
+    // },
+    // {
+    //   name: "our_product_image_2",
+    //   uploadDir,
+    //   previewSrc,
+    // },
   ],
 };
