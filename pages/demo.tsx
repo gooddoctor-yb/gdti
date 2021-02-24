@@ -223,7 +223,7 @@ export default function Hemo() {
         </div>
       </div>
      
-       
+      {/* WHO WE ARE */}
       <div className="container mx-auto">
         <div className="grid grid-cols-12 gap-3 auto-cols-fr mt-64">
           <div className="col-start-1 col-end-6 z-30">
@@ -245,6 +245,7 @@ export default function Hemo() {
         </div>
       </div>
     
+      {/* company milestone */}
       <div className="container mx-auto">
         <div className="mt-36">
           <div className="flex items-end">
@@ -260,6 +261,7 @@ export default function Hemo() {
           </div>
         </div>
       </div>
+    
       <div className="container mx-auto">
         <div className="grid grid-cols-12 gap-3 auto-cols-fr mt-36">
           <div className="col-start-2 col-end-12 relative ml-10" style={{ width: "852px" }}>

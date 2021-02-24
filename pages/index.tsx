@@ -30,6 +30,14 @@ export default function Home({ file }) {
     fields: [
       { name: "title", component: "text" },
       {
+        name: "title1",
+        component: "text",
+      },
+      {
+        name: "title2",
+        component: "text",
+      },
+      {
         name: "image_url",
         component: "image",
         validate: (value, allValues, meta, field) => {},
@@ -63,11 +71,78 @@ export default function Home({ file }) {
   useGithubToolbarPlugins();
 
   return (
-    <div className={styles.container}>
-      <Head>
+    <div className="min-h-screen">
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
+      <div
+        className="bg-cover bg-center bg-no-repeat h-header relative"
+        style={{ backgroundImage: "url(/background.png)" }}
+      >
+        <div className="container mx-auto">
+          <nav className="h-20 flex items-center justify-between">
+            <div className="header-left flex items-center">
+              <div className="hambuger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#FFF" />
+                </svg>
+              </div>
+              <div className="ml-7">
+                <Logo />
+              </div>
+            </div>
+            <div className="header-right flex items-center space-x-6">
+              {/* Be our partner */}
+              <div className="flex items-center relative">
+                <span className="text-white mr-1">Be Our Partner</span>
+                <Arrow />
+                <ul className="hidden">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+
+              {/* Help Centre */}
+              <div className="flex items-center">
+                <span className="text-white">Help Centre</span>
+              </div>
+
+              {/* Bahasa Indonesia */}
+              <div className="flex items-center relative">
+                <span className="text-white">Bahasa Indonesia</span>
+                <Arrow />
+                <ul className="hidden">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+
+              <Search />
+            </div>
+          </nav>
+          <div className="grid grid-cols-12 gap-3 auto-cols-fr mt-32">
+            <div className="col-start-2 col-end-6 z-30">
+              <div className="text-homeBanner leading-header w-96 font-bold text-white">
+                <span className="font-thin">{data.title1}</span>
+                <div>{data.title2}</div>
+              </div>
+            </div>
+            <div className="col-start-7 col-end-13 pl-9 relative">
+              <div className="absolute z-20">
+                <GDbackground />
+              </div>
+              <img style={{ marginTop: "400px" }} className="absolute z-10" src={data.image_url} />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
