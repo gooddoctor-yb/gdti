@@ -1,5 +1,3 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 import { TinaProvider, TinaCMS, useCMS, useForm, usePlugin } from "tinacms";
@@ -9,9 +7,6 @@ import GDbackground from "../public/bg_svg.svg";
 import Logo from "../public/gooddoctor_logo.svg";
 import Arrow from "../public/arrow_down.svg";
 import Search from "../public/search.svg";
-import BookMedical from "../public/book_medical.svg";
-import HealthArticle from "../public/health_article.svg";
-import GoodDoctorBusiness from "../public/good_doctor_business.svg";
 import ArrowForward from "../public/arrow_forward.svg";
 import LocationSVG from "../public/location_on.svg";
 import LogoLong from "../public/logo_long.svg";
@@ -381,22 +376,27 @@ export default function Home({ file }) {
           </div>
 
           <div className="col-start-7 col-end-13 relative">
-            <div className="absolute right-0 ml-6 contact-wrapper bg-normal_text_light px-px70 py-px60 flex flex-col text-white space-y-3">
+            <div className="absolute right-0 ml-6 contact-wrapper bg-normal_text_light px-px70 py-px60 flex flex-col text-white space-y-8">
               <div className="flex flex-col">
                 <label>First & last name *</label>
-                <input className="mt-3" value="" placeholder="Your first & last name" />
+                <input className="form-input" placeholder="Your first & last name" />
+                <span className="underline border focus:border-brand_title"></span>
               </div>
               <div className="flex flex-col">
                 <label>Email address *</label>
-                <input className="mt-3" value="" placeholder="Your email address" />
+                <input className="form-input" value="" placeholder="Your email address" />
+                <span className="underline border focus:border-brand_title"></span>
               </div>
               <div className="flex flex-col">
                 <label>Enquiry details *</label>
-                <input className="mt-3" value="" placeholder="Your enquiry" />
+                <input className="form-input" value="" placeholder="Your enquiry" />
+                <span className="underline border focus:border-brand_title"></span>
               </div>
-              <div className="pt-10 text-center">
+              <div className="pt-8 text-center">
                 <p>By sending this inquiry, I agree to the Terms & Conditions</p>
-                <button className="bg-brand_link px-10 py-4 mt-5">submit</button>
+                <button className="bg-brand_title hover:bg-brand_link hover:shadow-2xl rounded px-10 py-4 mt-6 font-bold">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
