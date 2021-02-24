@@ -23,12 +23,9 @@ const FormInput = styled.div`
   display: flex;
   flex-direction: column;
   > input {
-    margin-top: 24px;
-
     ~ span {
       border: 1px solid #ffffff;
     }
-
     &:focus {
       ~ span {
         border: 1px solid #255bb7;
@@ -411,8 +408,8 @@ export default function Home({ file }) {
                 <input className="mt-3 bg-transparent focus: outline-none" placeholder="Your enquiry" />
                 <span data-underline className=""></span>
               </FormInput>
-              <div className="pt-8 text-center">
-                <p>By sending this inquiry, I agree to the Terms & Conditions</p>
+              <div className="text-center">
+                <p className="mt-8">By sending this inquiry, I agree to the Terms & Conditions</p>
                 <button className="bg-brand_title hover:bg-brand_link hover:shadow-2xl rounded px-10 py-4 mt-6 font-bold">
                   Submit
                 </button>
