@@ -38,7 +38,79 @@ export default function Home({ file }) {
         component: "text",
       },
       {
-        name: "image_url",
+        name: "header_image_url",
+        component: "image",
+        validate: (value, allValues, meta, field) => {},
+        // Generate the frontmatter value based on the filename
+        // Decide the file upload directory for the post
+        uploadDir: (value, value2) => {
+          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
+          return "/public/";
+        },
+        // Generate the src attribute for the preview image.
+        previewSrc: (fullSrc) => {
+          console.log("fullSrc", fullSrc);
+          if (typeof fullSrc === "string") {
+            if (fullSrc.includes("http")) {
+              return fullSrc;
+            } else {
+              return "/" + fullSrc;
+            }
+          } else {
+            return fullSrc.previewSrc;
+          }
+        },
+      },
+      {
+        name: "company_milestone_1",
+        component: "image",
+        validate: (value, allValues, meta, field) => {},
+        // Generate the frontmatter value based on the filename
+        // Decide the file upload directory for the post
+        uploadDir: (value, value2) => {
+          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
+          return "/public/";
+        },
+        // Generate the src attribute for the preview image.
+        previewSrc: (fullSrc) => {
+          console.log("fullSrc", fullSrc);
+          if (typeof fullSrc === "string") {
+            if (fullSrc.includes("http")) {
+              return fullSrc;
+            } else {
+              return "/" + fullSrc;
+            }
+          } else {
+            return fullSrc.previewSrc;
+          }
+        },
+      },
+      {
+        name: "company_milestone_2",
+        component: "image",
+        validate: (value, allValues, meta, field) => {},
+        // Generate the frontmatter value based on the filename
+        // Decide the file upload directory for the post
+        uploadDir: (value, value2) => {
+          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
+          return "/public/";
+        },
+        // Generate the src attribute for the preview image.
+        previewSrc: (fullSrc) => {
+          console.log("fullSrc", fullSrc);
+          if (typeof fullSrc === "string") {
+            if (fullSrc.includes("http")) {
+              return fullSrc;
+            } else {
+              return "/" + fullSrc;
+            }
+          } else {
+            return fullSrc.previewSrc;
+          }
+        },
+      },
+      {
+        name: "company_milestone_3",
         component: "image",
         validate: (value, allValues, meta, field) => {},
         // Generate the frontmatter value based on the filename
@@ -142,7 +214,9 @@ export default function Home({ file }) {
               <img
                 style={{ marginTop: "400px" }}
                 className="absolute z-10"
-                src={typeof data.image_url === "string" ? data.image_url : data.image_url.previewSrc}
+                src={
+                  typeof data.header_image_url === "string" ? data.header_image_url : data.header_image_url.previewSrc
+                }
               />
             </div>
           </div>
@@ -176,13 +250,31 @@ export default function Home({ file }) {
         <div className="mt-36">
           <div className="flex items-end">
             <div>
-              <img src="/company/image1.png" />
+              <img
+                src={
+                  typeof data.company_milestone_1 === "string"
+                    ? data.company_milestone_1
+                    : data.company_milestone_1.previewSrc
+                }
+              />
             </div>
             <div className="">
-              <img src="/company/image2.png" />
+              <img
+                src={
+                  typeof data.company_milestone_2 === "string"
+                    ? data.company_milestone_2
+                    : data.company_milestone_2.previewSrc
+                }
+              />
             </div>
             <div>
-              <img src="/company/image3.png" />
+              <img
+                src={
+                  typeof data.company_milestone_3 === "string"
+                    ? data.company_milestone_3
+                    : data.company_milestone_3.previewSrc
+                }
+              />
             </div>
           </div>
         </div>

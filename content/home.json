@@ -2,7 +2,28 @@
   "title": "Gooddoctor",
   "title1": "BUILDING SEA’S",
   "title2": "DIGITAL HEALTH ECOSYSTEM",
-  "image_url": {
+  "header_image_url": {
+    "id": "public/home_001.png",
+    "filename": "home_001.png",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+  },
+  "company_milestone_1": {
+    "id": "public/home_001.png",
+    "filename": "home_001.png",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+  },
+  "company_milestone_2": {
+    "id": "public/home_001.png",
+    "filename": "home_001.png",
+    "directory": "public/",
+    "type": "file",
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+  },
+  "company_milestone_3": {
     "id": "public/home_001.png",
     "filename": "home_001.png",
     "directory": "public/",
