@@ -1,6 +1,6 @@
 {
   "title": "Gooddoctor",
-  "title1": "BUILDING SEA’S",
+  "title1": "BUILDING SEA’S 1223",
   "title2": "DIGITAL HEALTH ECOSYSTEM",
   "header_image_url": {
     "id": "public/home_001.png",
@@ -10,24 +10,24 @@
     "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
   },
   "company_milestone_1": {
-    "id": "public/home_001.png",
-    "filename": "home_001.png",
-    "directory": "public/",
+    "id": "public/company/image1.png",
+    "filename": "image1.png",
+    "directory": "public/company/",
     "type": "file",
-    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/company/image1.png"
   },
   "company_milestone_2": {
-    "id": "public/home_001.png",
-    "filename": "home_001.png",
-    "directory": "public/",
+    "id": "public/company/image2.png",
+    "filename": "image2.png",
+    "directory": "public/company/",
     "type": "file",
-    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/company/image2.png"
   },
   "company_milestone_3": {
-    "id": "public/home_001.png",
-    "filename": "home_001.png",
-    "directory": "public/",
+    "id": "public/company/image3.png",
+    "filename": "image3.png",
+    "directory": "public/company/",
     "type": "file",
-    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/home_001.png"
+    "previewSrc": "https://raw.githubusercontent.com/gooddoctor-yb/gdti/main/public/company/image3.png"
   }
 }
