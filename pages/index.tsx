@@ -44,12 +44,10 @@ export default function Home({ file }) {
         // Generate the frontmatter value based on the filename
         // Decide the file upload directory for the post
         uploadDir: (value, value2) => {
-          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
           return "/public/";
         },
         // Generate the src attribute for the preview image.
         previewSrc: (fullSrc) => {
-          console.log("fullSrc", fullSrc);
           if (typeof fullSrc === "string") {
             if (fullSrc.includes("http")) {
               return fullSrc;
@@ -57,7 +55,7 @@ export default function Home({ file }) {
               return "/" + fullSrc;
             }
           } else {
-            return fullSrc.previewSrc;
+            return fullSrc?.previewSrc;
           }
         },
       },
@@ -68,12 +66,10 @@ export default function Home({ file }) {
         // Generate the frontmatter value based on the filename
         // Decide the file upload directory for the post
         uploadDir: (value, value2) => {
-          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
           return "/public/";
         },
         // Generate the src attribute for the preview image.
         previewSrc: (fullSrc) => {
-          console.log("fullSrc", fullSrc);
           if (typeof fullSrc === "string") {
             if (fullSrc.includes("http")) {
               return fullSrc;
@@ -81,7 +77,7 @@ export default function Home({ file }) {
               return "/" + fullSrc;
             }
           } else {
-            return fullSrc.previewSrc;
+            return fullSrc?.previewSrc;
           }
         },
       },
@@ -92,12 +88,10 @@ export default function Home({ file }) {
         // Generate the frontmatter value based on the filename
         // Decide the file upload directory for the post
         uploadDir: (value, value2) => {
-          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
           return "/public/";
         },
         // Generate the src attribute for the preview image.
         previewSrc: (fullSrc) => {
-          console.log("fullSrc", fullSrc);
           if (typeof fullSrc === "string") {
             if (fullSrc.includes("http")) {
               return fullSrc;
@@ -116,12 +110,10 @@ export default function Home({ file }) {
         // Generate the frontmatter value based on the filename
         // Decide the file upload directory for the post
         uploadDir: (value, value2) => {
-          console.log("🚀 ~ file: index.tsx ~ line 26 ~ Home ~ value", value);
           return "/public/";
         },
         // Generate the src attribute for the preview image.
         previewSrc: (fullSrc) => {
-          console.log("fullSrc", fullSrc);
           if (typeof fullSrc === "string") {
             if (fullSrc.includes("http")) {
               return fullSrc;
@@ -129,7 +121,7 @@ export default function Home({ file }) {
               return "/" + fullSrc;
             }
           } else {
-            return fullSrc.previewSrc;
+            return fullSrc?.previewSrc;
           }
         },
       },
@@ -138,7 +130,6 @@ export default function Home({ file }) {
 
   // Registers a JSON Tina Form
   const [data, form] = useGithubJsonForm(file, formOptions);
-  console.log("🚀 ~ file: index.tsx ~ line 22 ~ Home ~ data", data);
   usePlugin(form);
   useGithubToolbarPlugins();
 
@@ -215,7 +206,7 @@ export default function Home({ file }) {
                 style={{ marginTop: "400px" }}
                 className="absolute z-10"
                 src={
-                  typeof data.header_image_url === "string" ? data.header_image_url : data.header_image_url.previewSrc
+                  typeof data.header_image_url === "string" ? data.header_image_url : data.header_image_url?.previewSrc
                 }
               />
             </div>
@@ -254,7 +245,7 @@ export default function Home({ file }) {
                 src={
                   typeof data.company_milestone_1 === "string"
                     ? data.company_milestone_1
-                    : data.company_milestone_1.previewSrc
+                    : data?.company_milestone_1?.previewSrc
                 }
               />
             </div>
@@ -263,7 +254,7 @@ export default function Home({ file }) {
                 src={
                   typeof data.company_milestone_2 === "string"
                     ? data.company_milestone_2
-                    : data.company_milestone_2.previewSrc
+                    : data?.company_milestone_2?.previewSrc
                 }
               />
             </div>
@@ -272,7 +263,7 @@ export default function Home({ file }) {
                 src={
                   typeof data.company_milestone_3 === "string"
                     ? data.company_milestone_3
-                    : data.company_milestone_3.previewSrc
+                    : data?.company_milestone_3?.previewSrc
                 }
               />
             </div>
