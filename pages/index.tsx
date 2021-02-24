@@ -170,7 +170,7 @@ export default function Home({ file }) {
               style={{ backgroundImage: "url('/doblue_quote_start.png')" }}
             ></div>
             <div className="text-5xl font-bold text-brand_title leading-tight">
-              Good Doctor Technology(GDT) is a health-tech company with the vision of ‘One Doctor for One Family in SEA’
+              {data.gdt_accent}
             </div>
             <div
               className="absolute -bottom-5 right-0 w-24 h-16 bg-no-repeat bg-center"
