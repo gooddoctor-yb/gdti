@@ -86,7 +86,7 @@ export interface EditLinkProps {
 
 export const EditLink = ({ cms }: EditLinkProps) => {
   return (
-    <div className="fixed top-3 right-3 z-50">
+    <div className="fixed bottom-3 right-3 z-50">
       <button className="text-white bg-blue-500 hover:bg-blue-700 px-5 py-3 rounded" onClick={() => cms.toggle()}>
         {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
       </button>
