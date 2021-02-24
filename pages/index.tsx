@@ -131,15 +131,9 @@ export default function Home({ file }) {
               <span className="w-14 border-2 border-brand_text"></span>
             </div>
 
-            <div className="font-bold text-normal_text_light text-title1 leading-tight">
-              Hey, nice to meet you. We’re Good Doctor
-            </div>
+            <div className="font-bold text-normal_text_light text-title1 leading-tight">{data.who_we_are}</div>
 
-            <div className="mt-3 font-normal leading-snug text-normal_text">
-              Appointed official partner of Grab in rolling out the GrabHealth service, our aim is to connect healthcare
-              professionals with patients in delivering high-quality health services, thus improving accessibility of
-              healthcare without being constrained by time and geographic boundaries.
-            </div>
+            <div className="mt-3 font-normal leading-snug text-normal_text">{data.who_we_are_description}</div>
           </div>
         </div>
       </div>
@@ -169,9 +163,7 @@ export default function Home({ file }) {
               className="absolute -top-14 left-0 w-20 h-14 bg-no-repeat bg-center"
               style={{ backgroundImage: "url('/doblue_quote_start.png')" }}
             ></div>
-            <div className="text-5xl font-bold text-brand_title leading-tight">
-              {data.gdt_accent}
-            </div>
+            <div className="text-5xl font-bold text-brand_title leading-tight">{data.gdt_accent}</div>
             <div
               className="absolute -bottom-5 right-0 w-24 h-16 bg-no-repeat bg-center"
               style={{ backgroundImage: "url('/doblue_quote_end.png')" }}
