@@ -34,10 +34,11 @@ const FormInput = styled.div`
   }
 `;
 
-export default function Home({ file }) {
-  // const data = file.data;
+const getImageUrl = (data, key) => {
+  return typeof data[key] === "string" ? data[key] : data[key]?.previewSrc;
+};
 
-  // Registers a JSON Tina Form
+export default function Home({ file }) {
   const [data, form] = useGithubJsonForm(file, formOptions);
   usePlugin(form);
   useGithubToolbarPlugins();
@@ -114,9 +115,7 @@ export default function Home({ file }) {
               <img
                 style={{ marginTop: "400px" }}
                 className="absolute z-10"
-                src={
-                  typeof data.header_image_url === "string" ? data.header_image_url : data.header_image_url?.previewSrc
-                }
+                src={getImageUrl(data, "header_image_url")}
               />
             </div>
           </div>
@@ -150,31 +149,13 @@ export default function Home({ file }) {
         <div className="mt-36">
           <div className="flex items-end">
             <div>
-              <img
-                src={
-                  typeof data.company_milestone_1 === "string"
-                    ? data.company_milestone_1
-                    : data?.company_milestone_1?.previewSrc
-                }
-              />
+              <img alt="milestone1" src={getImageUrl(data, "company_milestone_1")} />
             </div>
             <div className="">
-              <img
-                src={
-                  typeof data.company_milestone_2 === "string"
-                    ? data.company_milestone_2
-                    : data?.company_milestone_2?.previewSrc
-                }
-              />
+              <img alt="milestone2" src={getImageUrl(data, "company_milestone_2")} />
             </div>
             <div>
-              <img
-                src={
-                  typeof data.company_milestone_3 === "string"
-                    ? data.company_milestone_3
-                    : data?.company_milestone_3?.previewSrc
-                }
-              />
+              <img alt="milestone3" src={getImageUrl(data, "company_milestone_3")} />
             </div>
           </div>
         </div>
@@ -205,11 +186,11 @@ export default function Home({ file }) {
           <div className="col-start-1 col-end-5">
             <div className="py-8 px-9 transition ease-in duration-300 cursor-pointer hover:shadow-home">
               <div className="flex justify-center">
-                <img height="180" width="180" src="/animation_001.svg" alt="" />
+                <img height="180" width="180" src={getImageUrl(data, "animation_image_1")} alt="" />
               </div>
               <div className="space-y-3 text-left mt-8">
-                <h1 className="text-normal_text_light text-2xl font-semibold">Covid-19 Updates</h1>
-                <div className="mt-3">The latest resources to keep your family and you healthy and safe</div>
+                <h1 className="text-normal_text_light text-2xl font-semibold">{data.animation_title_1}</h1>
+                <div className="mt-3">{data.animation_description_1}</div>
                 <div>
                   <a className="text-brand_link" href="#">
                     Learn more
@@ -221,11 +202,11 @@ export default function Home({ file }) {
           <div className="col-start-5 col-end-9">
             <div className="py-8 px-9 transition ease-in duration-300 cursor-pointer hover:shadow-home">
               <div className="flex justify-center">
-                <img height="180" width="180" src="/animation_002.svg" alt="" />
+                <img height="180" width="180" src={getImageUrl(data, "animation_image_2")} alt="" />
               </div>
               <div className="space-y-3 text-left mt-8">
-                <h1 className="text-normal_text_light text-2xl font-semibold">Parenthood Tips</h1>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+                <h1 className="text-normal_text_light text-2xl font-semibold">{data.animation_title_2}</h1>
+                <div>{data.animation_description_2}</div>
                 <div>
                   <a className="text-brand_link" href="#">
                     Learn more
@@ -237,11 +218,11 @@ export default function Home({ file }) {
           <div className="col-start-9 col-end-13">
             <div className="py-8 px-9 transition ease-in duration-300 cursor-pointer hover:shadow-home">
               <div className="flex justify-center">
-                <img height="180" width="180" src="/animation_003.svg" alt="" />
+                <img height="180" width="180" src={getImageUrl(data, "animation_image_3")} alt="" />
               </div>
               <div className="space-y-3 text-left mt-8">
-                <h1 className="text-normal_text_light text-2xl font-semibold">Healthy Life</h1>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+                <h1 className="text-normal_text_light text-2xl font-semibold">{data.animation_title_3}</h1>
+                <div>{data.animation_description_3}</div>
                 <div>
                   <a className="text-brand_link" href="#">
                     Learn more
@@ -260,9 +241,7 @@ export default function Home({ file }) {
             <div className="text-lg text-brand_text">OUR PRODUCTS</div>
             <span className="w-14 border-2 border-brand_text"></span>
           </div>
-          <div className="font-bold text-title1 leading-tight">
-            Learn more about the other different ways we serve your healthcare needs.
-          </div>
+          <div className="font-bold text-title1 leading-tight">{data.our_products}</div>
         </div>
 
         <div className="grid gird-cols-12 gap-3 auto-cols-fr mt-10">
@@ -270,18 +249,14 @@ export default function Home({ file }) {
             <img src="/doctor.svg" alt="doctor" />
           </div>
           <div className="col-start-6 col-end-13 self-center">
-            <h1 className="text-4xl font-bold">Medical Consultation</h1>
-            <p className="mt-3">
-              From General Practitioners to Specialists, talking to a doctor is only 3 clicks away.
-            </p>
+            <h1 className="text-4xl font-bold">{data.our_product_title_1}</h1>
+            <p className="mt-3">{data.our_product_description_1}</p>
           </div>
         </div>
         <div className="grid gird-cols-12 gap-3 auto-cols-fr mt-10">
           <div className="col-start-2 col-end-7 self-center">
-            <h1 className="text-4xl font-bold">The GoodMall</h1>
-            <p className="mt-3">
-              Purchase your medication and other health products from licensed pharmacies with no hidden costs.
-            </p>
+            <h1 className="text-4xl font-bold">{data.our_product_title_2}</h1>
+            <p className="mt-3">{data.our_product_description_2}</p>
           </div>
           <div className="col-start-7 col-end-13">
             <img src="/goodmall.svg" alt="doctor" />
@@ -299,10 +274,8 @@ export default function Home({ file }) {
                   <img className="w-full h-full" alt="medical" src="/book_medical.svg" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold">Book medical appointment</h2>
-                  <div className="mt-3">
-                    Book your next medical appointment with hundreds of our hospital & lab partners - quick & easy.
-                  </div>
+                  <h2 className="text-2xl font-semibold">{data.tips_title_1}</h2>
+                  <div className="mt-3">{data.tips_description_1}</div>
                 </div>
               </div>
             </div>
@@ -312,11 +285,8 @@ export default function Home({ file }) {
                   <img className="w-full h-full" alt="medical" src="/health_article.svg" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold">Health articles</h2>
-                  <div className="mt-3">
-                    Be updated with thousands of health articles specially curated by our medical team to keep you
-                    informed & healthy.
-                  </div>
+                  <h2 className="text-2xl font-semibold">{data.tips_title_2}</h2>
+                  <div className="mt-3">{data.tips_description_2}</div>
                 </div>
               </div>
             </div>
@@ -331,23 +301,20 @@ export default function Home({ file }) {
             <div className="text-lg text-brand_text">BUSINESS SOLUTIONS</div>
             <span className="w-14 border-2 border-brand_text"></span>
           </div>
-          <div className="font-bold text-title1 leading-tight">
-            Be the boss who gives health insurance that doesn’t cost an arm and a leg
-          </div>
+          <div className="font-bold text-title1 leading-tight">{data.business_solutions}</div>
         </div>
 
         <div className="grid grid-cols-2 gap-3 auto-cols-fr mt-11">
           <div className="col-span-1">
             <img
               style={{ height: "426px", width: "483px" }}
-              src="/good_doctor_business.svg"
+              src={getImageUrl(data, "business_solutions_image_1")}
               alt="gooddoctor business"
             />
-            {/* <GoodDoctorBusiness /> */}
           </div>
           <div className="col-span-1 self-center">
-            <h2 className="font-bold text-title1 leading-tight">Good Doctor Business</h2>
-            <p className="mt-3">Provide a holistic healthcare plan for your employees or insurance policy holders</p>
+            <h2 className="font-bold text-title1 leading-tight">{data.business_solutions_title_1}</h2>
+            <p className="mt-3">{data.business_solutions_description_1}</p>
           </div>
         </div>
       </div>
