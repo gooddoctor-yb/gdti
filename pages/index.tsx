@@ -246,7 +246,7 @@ export default function Home({ file }) {
 
         <div className="grid gird-cols-12 gap-3 auto-cols-fr mt-10">
           <div className="col-start-1 col-end-6">
-            <img src="/doctor.svg" alt="doctor" />
+            <img src={getImageUrl(data, "our_product_image_1")} alt="doctor" />
           </div>
           <div className="col-start-6 col-end-13 self-center">
             <h1 className="text-4xl font-bold">{data.our_product_title_1}</h1>
@@ -259,7 +259,7 @@ export default function Home({ file }) {
             <p className="mt-3">{data.our_product_description_2}</p>
           </div>
           <div className="col-start-7 col-end-13">
-            <img src="/goodmall.svg" alt="doctor" />
+            <img src={getImageUrl(data, "our_product_image_2")} alt="doctor" />
           </div>
         </div>
       </div>
@@ -271,7 +271,7 @@ export default function Home({ file }) {
             <div className="col-span-1">
               <div className="flex items-center p-9 bg-white space-x-5">
                 <div className="min-h-px180 min-w-px180">
-                  <img className="w-full h-full" alt="medical" src="/book_medical.svg" />
+                  <img className="w-full h-full" alt="medical" src={getImageUrl(data, "tips_image_1")} />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold">{data.tips_title_1}</h2>
@@ -282,7 +282,7 @@ export default function Home({ file }) {
             <div className="col-span-1">
               <div className="flex items-center p-9 bg-white space-x-5">
                 <div className="min-h-px180 min-w-px180">
-                  <img className="w-full h-full" alt="medical" src="/health_article.svg" />
+                  <img className="w-full h-full" alt="medical" src={getImageUrl(data, "tips_image_2")} />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold">{data.tips_title_2}</h2>
