@@ -222,7 +222,7 @@ export default function Hemo() {
           </div>
         </div>
       </div>
-     
+
       {/* WHO WE ARE */}
       <div className="container mx-auto">
         <div className="grid grid-cols-12 gap-3 auto-cols-fr mt-64">
@@ -244,7 +244,7 @@ export default function Hemo() {
           </div>
         </div>
       </div>
-    
+
       {/* company milestone */}
       <div className="container mx-auto">
         <div className="mt-36">
@@ -261,7 +261,8 @@ export default function Hemo() {
           </div>
         </div>
       </div>
-    
+
+      {/* Gooddoctor SEA */}
       <div className="container mx-auto">
         <div className="grid grid-cols-12 gap-3 auto-cols-fr mt-36">
           <div className="col-start-2 col-end-12 relative ml-10" style={{ width: "852px" }}>
@@ -279,6 +280,8 @@ export default function Hemo() {
           </div>
         </div>
       </div>
+
+      {/* 3 banner , animation */}
       <div className="container mx-auto">
         <div className="grid gird-cols-12 gap-3 mt-36">
           <div className="col-start-1 col-end-5">
@@ -332,6 +335,7 @@ export default function Hemo() {
         </div>
       </div>
 
+      {/* our products */}
       <div className="container mx-auto">
         <div className="mt-40">
           <div className="flex items-center h-9 space-x-3">
@@ -490,7 +494,7 @@ export default function Hemo() {
         </div>
       </div>
 
-      {/* footer */}
+      {/* company info */}
       <div className="bg-brand_bg py-20">
         <div className="container mx-auto mt-64">
           <div className="grid grid-cols-12 gap-3 auto-cols-fr">
