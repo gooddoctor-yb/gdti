@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import App from "next/app";
 import { TinaCMS, TinaProvider } from "tinacms";
+import { useRouter } from "next/router";
 import { GithubClient, TinacmsGithubProvider, GithubMediaStore } from "react-tinacms-github";
 
 export default class Site extends App {
@@ -85,11 +86,15 @@ export interface EditLinkProps {
 }
 
 export const EditLink = ({ cms }: EditLinkProps) => {
-  return (
+  const router = useRouter();
+  const flag = router.asPath.includes("edit");
+  return flag ? (
     <div className="fixed bottom-3 right-3 z-50">
       <button className="text-white bg-blue-500 hover:bg-blue-700 px-5 py-3 rounded" onClick={() => cms.toggle()}>
         {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
       </button>
     </div>
+  ) : (
+    <div></div>
   );
 };
