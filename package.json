@@ -19,6 +19,7 @@
     "react-tinacms-editor": "^0.37.0",
     "react-tinacms-github": "^0.37.0",
     "react-tinacms-inline": "^0.37.0",
+    "axios": "0.21.1",
     "styled-components": "^5.2.1",
     "tinacms": "^0.37.0"
   },
